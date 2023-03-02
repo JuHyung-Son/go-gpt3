@@ -98,7 +98,7 @@ func (c *Client) CreateCompletion(
 		return
 	}
 
-	urlSuffix := "/completions"
+	urlSuffix := "/chat/completions"
 	req, err := http.NewRequest("POST", c.fullURL(urlSuffix), bytes.NewBuffer(reqBytes))
 	if err != nil {
 		return
